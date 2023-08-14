@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Adoption EF TA.props" />
+</Project>

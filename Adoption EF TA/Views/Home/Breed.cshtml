@@ -1,0 +1,17 @@
+﻿@model List<Animal>
+
+
+<h1>Please choose an Animal to adopt.</h1>
+@{
+    foreach (Animal a in Model)
+    {
+        <h1>@a.Name</h1>
+        <img height="100rem" src="@a.Img"/>
+        <p>@a.Age</p>
+        <p>@a.Description</p>
+
+        <form asp-method="post" asp-action="Adoption" asp-route-id="@a.Id">
+        <button type="submit">Adopt Me</button>
+        </form>
+    }
+}

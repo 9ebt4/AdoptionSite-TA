@@ -1,0 +1,10 @@
+﻿@model List<Animal>
+
+<h1>Please choose a breed.</h1>
+<h2>Choose a breed you would like.</h2>
+@{
+    foreach (Animal a in Model)
+    {
+        <a class="nav-link text-dark p-0" asp-action="Breed" asp-route-breed="@a.Breed"><p>@a.Breed</p></a>
+    }
+}
